@@ -33,6 +33,7 @@ dependencies = [
     "scipy==1.17.1",
     "scikit-learn==1.7.2",
     "kditransform==1.2.0",
+    "einops==0.8.2",
     "numpy",
     "huggingface-hub",
 ]
