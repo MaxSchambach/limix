@@ -25,7 +25,7 @@ install_requires = [
     'torchvision==0.22.1',
     'torchaudio==2.7.1',
     'tqdm==4.67.3',
-    'pandas==3.0.2',
+    'pandas==2.3.3',
     'scipy==1.17.1',
     'scikit-learn==1.7.2',
     'kditransform==1.2.0',
