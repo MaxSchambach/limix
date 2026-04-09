@@ -1,0 +1,11 @@
+include README.md
+include LICENSE.txt
+include setup.py
+recursive-include config *.json
+recursive-include doc *.png *.pdf
+exclude Dockerfile
+exclude environment.yml
+exclude LimiX_Technical_Report.pdf
+recursive-exclude benchmark_list *
+recursive-exclude examples *
+prune .git

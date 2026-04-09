@@ -1,13 +1,13 @@
-from inference.inference_method import InferenceAttentionMap, InferenceResultWithRetrieval
-from inference.preprocess import (
-    FeatureShuffler, 
-    FilterValidFeatures, 
-    CategoricalFeatureEncoder, 
-    RebalanceFeatureDistribution, 
+from limix.inference.inference_method import InferenceAttentionMap, InferenceResultWithRetrieval
+from limix.inference.preprocess import (
+    FeatureShuffler,
+    FilterValidFeatures,
+    CategoricalFeatureEncoder,
+    RebalanceFeatureDistribution,
     FingerprintFeatureEncoder,
     PolynomialInteractionGenerator,
     SubSampleData)
-from utils.loading import load_model
+from limix.utils.loading import load_model
 import torch
 from typing import List, Literal
 import random

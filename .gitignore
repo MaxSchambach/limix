@@ -11,3 +11,21 @@
 my_cache/
 result/
 .DS_Store
+
+# Package build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*~

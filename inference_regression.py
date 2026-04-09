@@ -16,11 +16,11 @@ try:
 except ImportError:
     from sklearn.metrics import mean_squared_error
     mean_squared_error = partial(mean_squared_error, squared=False)
-from inference.predictor import LimiXPredictor
-from utils.inference_utils import generate_infenerce_config, sample_inferece_params
+from limix.inference.predictor import LimiXPredictor
+from limix.utils.inference_utils import generate_infenerce_config, sample_inferece_params
 import torch.distributed as dist
 os.environ['HF_ENDPOINT']="https://hf-mirror.com"
-from utils.utils import  download_datset, download_model
+from limix.utils.utils import  download_datset, download_model
 
 if not torch.cuda.is_available():
     raise SystemError('GPU device not found. For fast training, please enable GPU.')

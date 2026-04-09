@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "limix"
+version = "1.0.0"
+description = "A foundation model for tabular data with unified learning capabilities"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "LimiX Team"},
+]
+keywords = ["machine-learning", "deep-learning", "tabular-data", "transformer", "foundation-model"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "torch==2.7.1",
+    "torchvision==0.22.1",
+    "torchaudio==2.7.1",
+    "tqdm==4.67.3",
+    "pandas==3.0.2",
+    "scipy==1.17.1",
+    "scikit-learn==1.7.2",
+    "kditransform==1.2.0",
+    "numpy",
+    "huggingface-hub",
+]
+
+[project.optional-dependencies]
+retrieval = ["optuna"]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+]
+all = ["limix[retrieval,dev,docs]"]
+
+[project.urls]
+Homepage = "https://github.com/limix-ldm/LimiX"
+Documentation = "https://www.limix.ai/doc/"
+Repository = "https://github.com/limix-ldm/LimiX"
+Issues = "https://github.com/limix-ldm/LimiX/issues"
+
+[tool.setuptools]
+packages = ["limix", "limix.model", "limix.inference", "limix.utils", "limix.retrieval_extension", "limix.retrieval_extension.retrieval_search_space"]
+
+[tool.setuptools.package-data]
+limix = ["py.typed"]
